@@ -1,0 +1,20 @@
+{
+  "id": "anthropic/gpt-4o",
+  "title": "GPT-4o",
+  "description": "Ready-to-use prompt examples for GPT-4o (OpenAI)",
+  "source": "@site/docs/anthropic/examples.mdx",
+  "sourceDirName": "anthropic",
+  "slug": "/anthropic/gpt-4o",
+  "permalink": "/PromptLibrary/docs/anthropic/gpt-4o",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/simonebittidev/PromptLibrary/edit/main/docs/anthropic/examples.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "gpt-4o",
+    "title": "GPT-4o",
+    "description": "Ready-to-use prompt examples for GPT-4o (OpenAI)"
+  },
+  "sidebar": "tutorialSidebar"
+}
