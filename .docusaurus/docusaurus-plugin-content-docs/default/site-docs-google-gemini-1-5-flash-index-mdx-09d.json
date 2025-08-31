@@ -1,0 +1,35 @@
+{
+  "id": "google/gemini-1.5-flash/google-gemini-1-5-flash-log-summary",
+  "title": "Google Gemini 1.5 Flash — Sintesi Log e Azioni",
+  "description": "Prompt per riassumere log di errori e proporre azioni correttive concise.",
+  "source": "@site/docs/google/gemini-1.5-flash/index.mdx",
+  "sourceDirName": "google/gemini-1.5-flash",
+  "slug": "/google/gemini-1.5-flash/",
+  "permalink": "/PromptLibrary/docs/google/gemini-1.5-flash/",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/simonebittidev/PromptLibrary/edit/main/docs/google/gemini-1.5-flash/index.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "google-gemini-1-5-flash-log-summary",
+    "title": "Google Gemini 1.5 Flash — Sintesi Log e Azioni",
+    "description": "Prompt per riassumere log di errori e proporre azioni correttive concise.",
+    "keywords": [
+      "google",
+      "gemini",
+      "flash",
+      "logs",
+      "summarization"
+    ]
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Cohere Command‑R+ — Q&A con Citazioni (RAG-ready)",
+    "permalink": "/PromptLibrary/docs/cohere/command-r-plus/"
+  },
+  "next": {
+    "title": "Google Gemini 1.5 Pro — Mapping JSON→Schema",
+    "permalink": "/PromptLibrary/docs/google/gemini-1.5-pro/"
+  }
+}

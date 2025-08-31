@@ -1,0 +1,34 @@
+{
+  "id": "mistral/mistral-large/mistral-large-openapi-upgrade",
+  "title": "Mistral Large — Refactor Spec → OpenAPI 3.1",
+  "description": "Prompt per rifattorizzare una specifica API legacy in OpenAPI 3.1 con note su gap e TODO.",
+  "source": "@site/docs/mistral/mistral-large/index.mdx",
+  "sourceDirName": "mistral/mistral-large",
+  "slug": "/mistral/mistral-large/",
+  "permalink": "/PromptLibrary/docs/mistral/mistral-large/",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/simonebittidev/PromptLibrary/edit/main/docs/mistral/mistral-large/index.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "mistral-large-openapi-upgrade",
+    "title": "Mistral Large — Refactor Spec → OpenAPI 3.1",
+    "description": "Prompt per rifattorizzare una specifica API legacy in OpenAPI 3.1 con note su gap e TODO.",
+    "keywords": [
+      "mistral",
+      "large",
+      "openapi",
+      "refactor"
+    ]
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Meta Llama 3 8B Instruct — Tagging Articoli",
+    "permalink": "/PromptLibrary/docs/meta/llama-3-8b-instruct/"
+  },
+  "next": {
+    "title": "Mixtral 8x7B Instruct — Test Case da JSON Schema",
+    "permalink": "/PromptLibrary/docs/mistral/mixtral-8x7b-instruct/"
+  }
+}

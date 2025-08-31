@@ -1,0 +1,50 @@
+---
+id: cohere-command-r-email-to-crm
+title: Cohere Command‑R — Estrazione Dati CRM da Email
+description: Prompt per estrarre campi CRM (contatto, azienda, richiesta) da email/lead in entrata.
+keywords: [cohere, command-r, extraction, crm]
+---
+
+**Overview**
+- **Modello:** Cohere `Command‑R`
+- **Perché:** Adatto a IE con vincoli e output JSON.
+- **Output:** Record CRM pulito.
+
+**Use Case**
+- **Scenario:** Normalizzare email di lead in un record CRM standard.
+
+**Prompt**
+
+```
+Ruolo: Sei un normalizzatore di lead.
+
+Output SOLO JSON:
+{
+  "nome": "string",
+  "cognome": "string",
+  "email": "string",
+  "azienda": "string|null",
+  "ruolo": "string|null",
+  "richiesta": "string",
+  "interesse": "basso|medio|alto",
+  "note": "string|null"
+}
+
+Regole:
+- Non inventare email/ruoli. Se assenti, null.
+- "interesse" basato su segnali (urgenza, budget, fit).
+
+Email (<mail>):
+<mail>
+{{TESTO_EMAIL}}
+</mail>
+```
+
+**Perché Funziona**
+- **Schema esplicito:** semplice ingest nel CRM.
+- **Regole chiare:** migliorano coerenza tra esempi.
+
+**Fonti**
+- Cohere — guida al prompting per estrazione strutturata.
+- Pratiche CRM per lead qualification.
+

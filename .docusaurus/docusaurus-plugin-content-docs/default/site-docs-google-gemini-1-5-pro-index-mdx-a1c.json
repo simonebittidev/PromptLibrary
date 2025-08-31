@@ -1,0 +1,35 @@
+{
+  "id": "google/gemini-1.5-pro/google-gemini-1-5-pro-mapping",
+  "title": "Google Gemini 1.5 Pro — Mapping JSON→Schema",
+  "description": "Prompt per mappare un JSON sorgente verso uno schema target, con validazione e note su difformità.",
+  "source": "@site/docs/google/gemini-1.5-pro/index.mdx",
+  "sourceDirName": "google/gemini-1.5-pro",
+  "slug": "/google/gemini-1.5-pro/",
+  "permalink": "/PromptLibrary/docs/google/gemini-1.5-pro/",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/simonebittidev/PromptLibrary/edit/main/docs/google/gemini-1.5-pro/index.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "google-gemini-1-5-pro-mapping",
+    "title": "Google Gemini 1.5 Pro — Mapping JSON→Schema",
+    "description": "Prompt per mappare un JSON sorgente verso uno schema target, con validazione e note su difformità.",
+    "keywords": [
+      "google",
+      "gemini",
+      "gemini 1.5 pro",
+      "mapping",
+      "schema"
+    ]
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Google Gemini 1.5 Flash — Sintesi Log e Azioni",
+    "permalink": "/PromptLibrary/docs/google/gemini-1.5-flash/"
+  },
+  "next": {
+    "title": "xAI Grok‑1.5 — Regole di Alerting da Log",
+    "permalink": "/PromptLibrary/docs/grok/grok-1.5/"
+  }
+}

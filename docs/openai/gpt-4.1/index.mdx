@@ -1,0 +1,71 @@
+---
+id: openai-gpt-4-1-json-to-markdown
+title: OpenAI GPT‑4.1 — JSON API → Report Markdown
+description: Prompt di esempio per convertire il JSON di un'API in un report Markdown con KPI e vincoli di qualità.
+keywords: [openai, gpt-4.1, prompt, json, markdown, report]
+---
+
+**Overview**
+- **Modello:** OpenAI `gpt-4.1`
+- **Perché:** Ottimo per reasoning, trasformazioni strutturate e generazione di report leggibili.
+- **Output:** Un report Markdown coerente e verificabile a partire da un JSON di input.
+
+**Use Case**
+- **Scenario:** Hai una risposta JSON dall'endpoint `GET /orders` del tuo e‑commerce. Vuoi un report leggibile per il business con KPI e una tabella sintetica.
+
+**Prompt**
+
+```
+Ruolo: Sei un generatore di report dati preciso e affidabile.
+
+Obiettivo: Trasforma il JSON fornito (racchiuso tra i delimitatori <json></json>) in un report Markdown destinato a stakeholder non tecnici.
+
+Istruzioni:
+- Non inventare dati. Se un campo manca, scrivi "N/D" e aggiungilo alla sezione "Dati Mancanti".
+- Evidenzia assunzioni esplicite solo se inevitabili e mettile nella sezione "Assunzioni".
+- Mantieni la terminologia consistente con i nomi dei campi presenti nel JSON.
+- Le valute vanno formattate in EUR con 2 decimali, separatore decimale "," e migliaia ".".
+- Le date vanno rese in formato ISO (YYYY-MM-DD).
+- Ordina le tabelle per metrica rilevante decrescente (es. ricavi).
+
+Schema di Output (Markdown):
+1. # Panoramica
+   - Periodo: <inferito se presente>
+   - Ordini totali: <numero>
+   - Ricavi totali: <EUR formattato>
+2. ## KPI Principali
+   - Tasso di conversione: <percentuale o N/D>
+   - AOV (scontrino medio): <EUR>
+   - Rimborsi: <conteggio e % su ordini>
+3. ## Top Prodotti (tabella)
+   | Prodotto | Quantità | Ricavi (EUR) |
+   |---|---:|---:|
+   | ... | ... | ... |
+4. ## Insight
+   - 3-5 bullet su trend, anomalie o outlier (solo se basati sui dati).
+5. ## Dati Mancanti
+   - Elenco puntato dei campi attesi ma assenti.
+6. ## Assunzioni
+   - Elenco puntato di eventuali assunzioni minime.
+
+Qualità:
+- Aderisci rigorosamente allo schema di output.
+- Niente prefazioni o spiegazioni fuori dallo schema.
+
+Input JSON:
+<json>
+{{INPUT_JSON}}
+</json>
+```
+
+**Perché Funziona**
+- **Ruolo + Obiettivo:** imposta il comportamento e l'output atteso, riducendo ambiguità.
+- **Delimitatori (json):** separano chiaramente istruzioni dai dati d’ingresso.
+- **Schema esplicito:** forza struttura, facilita QA automatico e diff tra versioni.
+- **Vincoli di formato:** date/valute coerenti semplificano l’integrazione downstream.
+- **Sezioni "Dati Mancanti" e "Assunzioni":** prevengono allucinazioni e migliorano la trasparenza.
+
+**Fonti**
+- OpenAI — Prompt Engineering Guide: principi su ruolo, istruzioni chiare, delimitatori e schemi d’output.
+- Best practice comuni di prompt design per trasformazioni strutturate (use case reportistica dati).
+

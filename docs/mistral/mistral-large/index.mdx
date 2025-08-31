@@ -1,0 +1,44 @@
+---
+id: mistral-large-openapi-upgrade
+title: Mistral Large — Refactor Spec → OpenAPI 3.1
+description: Prompt per rifattorizzare una specifica API legacy in OpenAPI 3.1 con note su gap e TODO.
+keywords: [mistral, large, openapi, refactor]
+---
+
+**Overview**
+- **Modello:** `Mistral Large`
+- **Perché:** Buono per trasformazioni guidate da schema e spiegazioni compatte.
+- **Output:** Spec OAS 3.1 + elenco TODO.
+
+**Use Case**
+- **Scenario:** Hai una descrizione API non standard (markdown/raml/swagger vecchio) e vuoi OAS 3.1 valida.
+
+**Prompt**
+
+```
+Ruolo: Sei un migratore di specifiche API.
+
+Obiettivi:
+1) Genera OpenAPI 3.1 minimale ma valido (JSON) dai contenuti tra <spec_legacy>.
+2) Includi server, paths, parametri, request/response schema e security.
+3) Fornisci un array "todo" con punti mancanti/ambigui.
+
+Output:
+{
+  "openapi": { ...spec 3.1... },
+  "todo": ["...", "..."]
+}
+
+<spec_legacy>
+{{TESTO_SPEC_VECCHIA}}
+</spec_legacy>
+```
+
+**Perché Funziona**
+- **Obiettivi separati:** conversione + gap analysis.
+- **Formato JSON:** facile da validare con linter OAS.
+
+**Fonti**
+- Mistral — suggerimenti di prompting per output strutturati.
+- Best practice di migrazione specifiche API.
+

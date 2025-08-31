@@ -1,0 +1,35 @@
+{
+  "id": "grok/grok-1.5/xai-grok-1-5-log-rules",
+  "title": "xAI Grok‑1.5 — Regole di Alerting da Log",
+  "description": "Prompt per derivare regole di alert/filtri da log applicativi, con output JSON di deployment.",
+  "source": "@site/docs/grok/grok-1.5/index.mdx",
+  "sourceDirName": "grok/grok-1.5",
+  "slug": "/grok/grok-1.5/",
+  "permalink": "/PromptLibrary/docs/grok/grok-1.5/",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/simonebittidev/PromptLibrary/edit/main/docs/grok/grok-1.5/index.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "xai-grok-1-5-log-rules",
+    "title": "xAI Grok‑1.5 — Regole di Alerting da Log",
+    "description": "Prompt per derivare regole di alert/filtri da log applicativi, con output JSON di deployment.",
+    "keywords": [
+      "xai",
+      "grok",
+      "grok-1.5",
+      "logs",
+      "alerting"
+    ]
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Google Gemini 1.5 Pro — Mapping JSON→Schema",
+    "permalink": "/PromptLibrary/docs/google/gemini-1.5-pro/"
+  },
+  "next": {
+    "title": "xAI Grok‑1.5V — Tabella da Grafico (Vision)",
+    "permalink": "/PromptLibrary/docs/grok/grok-1.5v/"
+  }
+}

@@ -1,0 +1,40 @@
+---
+id: cohere-command-r-plus-rag-qa
+title: Cohere Command‑R+ — Q&A con Citazioni (RAG-ready)
+description: Prompt per rispondere a domande su documentazione fornita, citando frammenti testuali.
+keywords: [cohere, command-r-plus, rag, citations]
+---
+
+**Overview**
+- **Modello:** Cohere `Command‑R+`
+- **Perché:** Ottimizzato per RAG, risposte con citazioni e ragionamento controllato.
+- **Output:** Risposta concisa + citazioni dei passaggi utilizzati.
+
+**Use Case**
+- **Scenario:** Fornisci estratti di documentazione API e vuoi risposte con riferimenti puntuali.
+
+**Prompt**
+
+```
+Ruolo: Sei un assistente tecnico. Rispondi SOLO usando i passaggi forniti.
+
+Istruzioni:
+- Leggi i passaggi tra <docs>. Se l'informazione non è presente, rispondi "Non presente nei documenti".
+- Output JSON con: {"risposta": string, "citazioni": [ {"quote": string} ]}
+- Le citazioni devono essere brevi (<= 200 caratteri) e testuali.
+
+<docs>
+{{FRAMMENTI_DOCUMENTAZIONE}}
+</docs>
+
+Domanda: {{DOMANDA}}
+```
+
+**Perché Funziona**
+- **Vincolo alle fonti:** riduce allucinazioni.
+- **Citazioni brevi:** verificabilità e UX chiara.
+
+**Fonti**
+- Cohere — Prompting & RAG best practices: risposte citate e grounded.
+- Pattern comuni di QA con retrieval.
+

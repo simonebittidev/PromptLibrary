@@ -1,0 +1,30 @@
+{
+  "id": "openai/gpt-4o-mini/openai-gpt-4o-mini-seo-metadata",
+  "title": "OpenAI GPT‑4o‑mini — SEO Metadata da JSON Prodotto",
+  "description": "Prompt per generare title, description e keyword SEO da un JSON di prodotto.",
+  "source": "@site/docs/openai/gpt-4o-mini/index.mdx",
+  "sourceDirName": "openai/gpt-4o-mini",
+  "slug": "/openai/gpt-4o-mini/",
+  "permalink": "/PromptLibrary/docs/openai/gpt-4o-mini/",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/simonebittidev/PromptLibrary/edit/main/docs/openai/gpt-4o-mini/index.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "openai-gpt-4o-mini-seo-metadata",
+    "title": "OpenAI GPT‑4o‑mini — SEO Metadata da JSON Prodotto",
+    "description": "Prompt per generare title, description e keyword SEO da un JSON di prodotto.",
+    "keywords": [
+      "openai",
+      "gpt-4o-mini",
+      "seo",
+      "generation"
+    ]
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "OpenAI GPT‑4o — Estrazione Spese da Scontrino (Vision)",
+    "permalink": "/PromptLibrary/docs/openai/gpt-4o/"
+  }
+}

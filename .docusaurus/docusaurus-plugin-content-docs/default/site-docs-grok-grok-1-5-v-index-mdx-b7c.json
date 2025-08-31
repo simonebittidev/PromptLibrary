@@ -1,0 +1,34 @@
+{
+  "id": "grok/grok-1.5v/xai-grok-1-5v-table-from-chart",
+  "title": "xAI Grok‑1.5V — Tabella da Grafico (Vision)",
+  "description": "Prompt per estrarre una tabella strutturata da un grafico o immagine di report.",
+  "source": "@site/docs/grok/grok-1.5v/index.mdx",
+  "sourceDirName": "grok/grok-1.5v",
+  "slug": "/grok/grok-1.5v/",
+  "permalink": "/PromptLibrary/docs/grok/grok-1.5v/",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/simonebittidev/PromptLibrary/edit/main/docs/grok/grok-1.5v/index.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "xai-grok-1-5v-table-from-chart",
+    "title": "xAI Grok‑1.5V — Tabella da Grafico (Vision)",
+    "description": "Prompt per estrarre una tabella strutturata da un grafico o immagine di report.",
+    "keywords": [
+      "xai",
+      "grok",
+      "vision",
+      "table extraction"
+    ]
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "xAI Grok‑1.5 — Regole di Alerting da Log",
+    "permalink": "/PromptLibrary/docs/grok/grok-1.5/"
+  },
+  "next": {
+    "title": "Meta Llama 3 70B Instruct — Piano Migrazione API",
+    "permalink": "/PromptLibrary/docs/meta/llama-3-70b-instruct/"
+  }
+}

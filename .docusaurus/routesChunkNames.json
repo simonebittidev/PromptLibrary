@@ -2,75 +2,147 @@
   "/PromptLibrary/__docusaurus/debug-463": {
     "__comp": "__comp---theme-debug-config-23-a-2ff",
     "__context": {
-      "plugin": "plugin---docusaurus-debugb-38-ad3"
+      "plugin": "plugin---prompt-library-docusaurus-debugb-38-c24"
     }
   },
   "/PromptLibrary/__docusaurus/debug/config-8c5": {
     "__comp": "__comp---theme-debug-config-23-a-2ff",
     "__context": {
-      "plugin": "plugin---docusaurus-debugb-38-ad3"
+      "plugin": "plugin---prompt-library-docusaurus-debugb-38-c24"
     }
   },
   "/PromptLibrary/__docusaurus/debug/content-736": {
     "__comp": "__comp---theme-debug-contentba-8-ce7",
     "__context": {
-      "plugin": "plugin---docusaurus-debugb-38-ad3"
+      "plugin": "plugin---prompt-library-docusaurus-debugb-38-c24"
     },
     "__props": "__props---prompt-library-docusaurus-debug-contentd-5-f-2ec"
   },
   "/PromptLibrary/__docusaurus/debug/globalData-495": {
     "__comp": "__comp---theme-debug-global-dataede-0fa",
     "__context": {
-      "plugin": "plugin---docusaurus-debugb-38-ad3"
+      "plugin": "plugin---prompt-library-docusaurus-debugb-38-c24"
     }
   },
   "/PromptLibrary/__docusaurus/debug/metadata-e15": {
     "__comp": "__comp---theme-debug-site-metadata-68-e-3d4",
     "__context": {
-      "plugin": "plugin---docusaurus-debugb-38-ad3"
+      "plugin": "plugin---prompt-library-docusaurus-debugb-38-c24"
     }
   },
   "/PromptLibrary/__docusaurus/debug/registry-43a": {
     "__comp": "__comp---theme-debug-registry-679-501",
     "__context": {
-      "plugin": "plugin---docusaurus-debugb-38-ad3"
+      "plugin": "plugin---prompt-library-docusaurus-debugb-38-c24"
     }
   },
   "/PromptLibrary/__docusaurus/debug/routes-bcb": {
     "__comp": "__comp---theme-debug-routes-946-699",
     "__context": {
-      "plugin": "plugin---docusaurus-debugb-38-ad3"
+      "plugin": "plugin---prompt-library-docusaurus-debugb-38-c24"
     }
   },
   "/PromptLibrary/markdown-page-9c2": {
     "__comp": "__comp---theme-mdx-page-1-f-3-b90",
     "__context": {
-      "plugin": "plugin---markdown-pagea-74-7b5"
+      "plugin": "plugin---prompt-library-markdown-pagea-74-27c"
     },
-    "content": "content---markdown-page-393-028"
+    "content": "content---prompt-library-markdown-page-393-344"
   },
-  "/PromptLibrary/docs-f00": {
+  "/PromptLibrary/docs-afe": {
     "__comp": "__comp---theme-docs-root-5-e-9-0b6",
     "__context": {
-      "plugin": "plugin---docsaba-d7c"
+      "plugin": "plugin---prompt-library-docsaba-51b"
     }
   },
-  "/PromptLibrary/docs-cc3": {
+  "/PromptLibrary/docs-c0d": {
     "__comp": "__comp---theme-doc-version-roota-7-b-5de",
     "__props": "__props---prompt-library-docs-600-5bf"
   },
-  "/PromptLibrary/docs-c7f": {
+  "/PromptLibrary/docs-724": {
     "__comp": "__comp---theme-doc-roota-94-67a"
   },
-  "/PromptLibrary/docs/anthropic/gpt-4o-476": {
+  "/PromptLibrary/docs/anthropic/claude-3-haiku/-d43": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---prompt-library-docs-anthropic-examples-3-e-8-e8c"
+    "content": "content---prompt-library-docs-anthropic-claude-3-haiku-671-8b8"
+  },
+  "/PromptLibrary/docs/anthropic/claude-3-opus/-cd9": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---prompt-library-docs-anthropic-claude-3-opus-ab-9-430"
+  },
+  "/PromptLibrary/docs/anthropic/claude-3-sonnet/-6a2": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---prompt-library-docs-anthropic-claude-3-sonnet-9-a-7-41e"
+  },
+  "/PromptLibrary/docs/cohere/command-r-plus/-d0e": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---prompt-library-docs-cohere-command-r-plus-1-de-629"
+  },
+  "/PromptLibrary/docs/cohere/command-r/-ed5": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---prompt-library-docs-cohere-command-r-fd-1-746"
+  },
+  "/PromptLibrary/docs/google/gemini-1.5-flash/-c4b": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---prompt-library-docs-google-gemini-1-5-flash-09-d-ee3"
+  },
+  "/PromptLibrary/docs/google/gemini-1.5-pro/-db8": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---prompt-library-docs-google-gemini-1-5-pro-a-1-c-427"
+  },
+  "/PromptLibrary/docs/grok/grok-1.5/-031": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---prompt-library-docs-grok-grok-1-5-c-09-5c2"
+  },
+  "/PromptLibrary/docs/grok/grok-1.5v/-9f9": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---prompt-library-docs-grok-grok-1-5-v-b-7-c-759"
+  },
+  "/PromptLibrary/docs/meta/llama-3-70b-instruct/-0a6": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---prompt-library-docs-meta-llama-3-70-b-instruct-7-a-2-877"
+  },
+  "/PromptLibrary/docs/meta/llama-3-8b-instruct/-a67": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---prompt-library-docs-meta-llama-3-8-b-instruct-3-fb-b60"
+  },
+  "/PromptLibrary/docs/mistral/mistral-large/-cf6": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---prompt-library-docs-mistral-mistral-large-428-422"
+  },
+  "/PromptLibrary/docs/mistral/mixtral-8x7b-instruct/-e08": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---prompt-library-docs-mistral-mixtral-8-x-7-b-instruct-1-f-5-3a4"
+  },
+  "/PromptLibrary/docs/openai/-5bc": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---prompt-library-docs-openai-811-c1a"
+  },
+  "/PromptLibrary/docs/openai/gpt-4.1-mini/-d72": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---prompt-library-docs-openai-gpt-4-1-mini-dda-fba"
+  },
+  "/PromptLibrary/docs/openai/gpt-4.1/-dba": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---prompt-library-docs-openai-gpt-4-1-4-ea-7f9"
+  },
+  "/PromptLibrary/docs/openai/gpt-4o-0a7": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---prompt-library-docs-openai-gpt-4-o-6-c-9-3f9"
+  },
+  "/PromptLibrary/docs/openai/gpt-4o-mini/-ef3": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---prompt-library-docs-openai-gpt-4-o-mini-c-80-049"
+  },
+  "/PromptLibrary/docs/openai/gpt-4o/-55b": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---prompt-library-docs-openai-gpt-4-o-154-964"
   },
   "/PromptLibrary/-5c6": {
     "__comp": "__comp---site-src-pages-index-tsx-1-df-d3e",
     "__context": {
-      "plugin": "plugin---markdown-pagea-74-7b5"
+      "plugin": "plugin---prompt-library-markdown-pagea-74-27c"
     },
-    "config": "config---5-e-9-4f3"
+    "config": "config---prompt-library-5-e-9-932"
   }
 }

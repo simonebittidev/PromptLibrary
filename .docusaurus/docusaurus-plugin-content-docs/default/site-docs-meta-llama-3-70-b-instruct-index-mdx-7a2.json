@@ -1,0 +1,34 @@
+{
+  "id": "meta/llama-3-70b-instruct/meta-llama-3-70b-instruct-migration-plan",
+  "title": "Meta Llama 3 70B Instruct — Piano Migrazione API",
+  "description": "Prompt per pianificare la migrazione di un'API con attività, dipendenze e rischi, in YAML.",
+  "source": "@site/docs/meta/llama-3-70b-instruct/index.mdx",
+  "sourceDirName": "meta/llama-3-70b-instruct",
+  "slug": "/meta/llama-3-70b-instruct/",
+  "permalink": "/PromptLibrary/docs/meta/llama-3-70b-instruct/",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/simonebittidev/PromptLibrary/edit/main/docs/meta/llama-3-70b-instruct/index.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "meta-llama-3-70b-instruct-migration-plan",
+    "title": "Meta Llama 3 70B Instruct — Piano Migrazione API",
+    "description": "Prompt per pianificare la migrazione di un'API con attività, dipendenze e rischi, in YAML.",
+    "keywords": [
+      "meta",
+      "llama 3",
+      "planning",
+      "migration"
+    ]
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "xAI Grok‑1.5V — Tabella da Grafico (Vision)",
+    "permalink": "/PromptLibrary/docs/grok/grok-1.5v/"
+  },
+  "next": {
+    "title": "Meta Llama 3 8B Instruct — Tagging Articoli",
+    "permalink": "/PromptLibrary/docs/meta/llama-3-8b-instruct/"
+  }
+}

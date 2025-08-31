@@ -1,0 +1,39 @@
+---
+id: meta-llama-3-8b-instruct-topic-tagging
+title: Meta Llama 3 8B Instruct — Tagging Articoli
+description: Prompt per classificare articoli di news in topic predefiniti con breve giustificazione.
+keywords: [meta, llama 3, classification, tagging]
+---
+
+**Overview**
+- **Modello:** Meta `Llama 3 8B Instruct`
+- **Perché:** Leggero e veloce per classificazione.
+- **Output:** JSON con `topic` e `rationale` breve.
+
+**Use Case**
+- **Scenario:** Devi etichettare articoli in categorie: [politica, economia, tecnologia, sport, cultura, esteri, altro].
+
+**Prompt**
+
+```
+Ruolo: Sei un classificatore di articoli.
+
+Regole:
+- Scegli UNA categoria dalla lista.
+- Fornisci una rationele di max 1 frase.
+- Output SOLO JSON: {"topic": "...", "rationale": "..."}
+
+Articolo (<doc>):
+<doc>
+{{TESTO_ARTICOLO}}
+</doc>
+```
+
+**Perché Funziona**
+- **Classi chiuse + razionale breve:** aumenta tracciabilità senza chiedere catene di pensiero.
+- **Compatibile con throughput alto:** modello leggero.
+
+**Fonti**
+- Meta/Llama — consigli generali per prompting.
+- Pratiche standard di classificazione testuale.
+

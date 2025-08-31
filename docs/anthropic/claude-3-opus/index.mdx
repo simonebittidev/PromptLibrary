@@ -1,0 +1,46 @@
+---
+id: anthropic-claude-3-opus-compliance-checklist
+title: Anthropic Claude 3 Opus — Checklist Compliance da T&C
+description: Prompt per estrarre requisiti e rischi da Termini & Condizioni/API Policy in una checklist di conformità.
+keywords: [anthropic, claude 3, opus, compliance, policy]
+---
+
+**Overview**
+- **Modello:** Anthropic `Claude 3 Opus`
+- **Perché:** Ragionamento profondo e prudente per testi legali/policy.
+- **Output:** Checklist strutturata con rischi e mitigazioni.
+
+**Use Case**
+- **Scenario:** Devi valutare l’aderenza di un’integrazione a T&C/Policy API e produrre una checklist azionabile.
+
+**Prompt**
+
+```
+Ruolo: Sei un analista compliance. Devi trasformare T&C/Policy (tra <doc>) in una checklist operativa.
+
+Output JSON:
+{
+  "requisiti": [ {"id": "R1", "testo": "...", "obbligatorio": true, "evidenza": "citazione breve"} ],
+  "rischi": [ {"id": "K1", "descrizione": "...", "impatto": "basso|medio|alto", "mitigazione": "..."} ],
+  "azioni": [ {"id": "A1", "descrizione": "...", "priorita": 1} ]
+}
+
+Istruzioni:
+- Usa citazioni brevi testuali del documento come "evidenza".
+- Non inventare requisiti. Se ambigui, marca e includi domanda di chiarimento in "azioni".
+- Ordina le azioni per priorità (1 = più urgente).
+
+<doc>
+{{TESTO_TERMINI_E_CONDIZIONI}}
+</doc>
+```
+
+**Perché Funziona**
+- **Citazioni brevi:** tracciabilità verso la fonte.
+- **Separazione requisiti/rischi/azioni:** supporta audit e pianificazione.
+- **Opus:** adatto a analisi più complesse e ambigue.
+
+**Fonti**
+- Anthropic — Prompting & Safety guidelines: enfasi su trasparenza e prudenza.
+- Best practice compliance-as-data con output strutturato.
+

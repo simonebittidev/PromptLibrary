@@ -1,0 +1,53 @@
+---
+id: anthropic-claude-3-sonnet-sql-from-spec
+title: Anthropic Claude 3 Sonnet — SQL da Schema + Domanda
+description: Prompt per generare query SQL corrette a partire da descrizione schema e richiesta in linguaggio naturale.
+keywords: [anthropic, claude 3, sonnet, sql, generation]
+---
+
+**Overview**
+- **Modello:** Anthropic `Claude 3 Sonnet`
+- **Perché:** Buon compromesso costo/qualità per generazione controllata di SQL.
+- **Output:** Query SQL valida + nota su assunzioni/limitazioni.
+
+**Use Case**
+- **Scenario:** L’analista chiede un’informazione; fornisci lo schema tabelle e vuoi una query pronta.
+
+**Prompt**
+
+```
+Ruolo: Sei un assistente SQL. Genera UNA query SQL conforme allo schema fornito.
+
+Istruzioni:
+- Non inventare colonne o tabelle.
+- Se mancano informazioni essenziali (filtri/metriche), proponi UNA domanda di chiarimento invece della query.
+- Se possibile, evita SELECT * e usa alias espliciti.
+
+Output:
+```
+```sql
+-- Query
+...
+```
+```
+
+Schema (tra <schema>):
+<schema>
+{{TESTO_SCHEMA_TABELLE}}
+</schema>
+
+Domanda (tra <ask>):
+<ask>
+{{DOMANDA_ANALISTA}}
+</ask>
+```
+
+**Perché Funziona**
+- **Regole conservative:** riducono errori semantici.
+- **Fallback domanda:** meglio che congetturare.
+- **Output tipizzato (SQL):** semplice da eseguire/verificare.
+
+**Fonti**
+- Anthropic — Prompting: specificità delle istruzioni e gestione incertezze.
+- Pattern comuni per SQL generation sicura.
+

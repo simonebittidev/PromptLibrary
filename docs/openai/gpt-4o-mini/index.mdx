@@ -1,0 +1,41 @@
+---
+id: openai-gpt-4o-mini-seo-metadata
+title: OpenAI GPT‑4o‑mini — SEO Metadata da JSON Prodotto
+description: Prompt per generare title, description e keyword SEO da un JSON di prodotto.
+keywords: [openai, gpt-4o-mini, seo, generation]
+---
+
+**Overview**
+- **Modello:** OpenAI `gpt-4o-mini`
+- **Perché:** Costi bassi, latenza ridotta per generazioni templated.
+- **Output:** Metadati SEO brevi e coerenti per pagine prodotto.
+
+**Use Case**
+- **Scenario:** Dato un JSON di prodotto (`nome`, `brand`, `categoria`, `benefici`, `tonalita`, `prezzo`, `unique_selling_points`), generare meta tag SEO.
+
+**Prompt**
+
+```
+Ruolo: Sei un generatore di metadati SEO concisi e informativi.
+
+Regole:
+- Titolo <= 60 caratteri, Description tra 140–160 caratteri.
+- Niente clickbait, niente superlativi infondati. Mantieni keyword naturali.
+- Usa l'italiano corretto. Non ripetere brand inutilmente.
+- Restituisci SOLO JSON con: {"title", "description", "keywords": [..]}.
+
+Input prodotto (tra <json>):
+<json>
+{{JSON_PRODOTTO}}
+</json>
+```
+
+**Perché Funziona**
+- **Vincoli di lunghezza:** allineati alle pratiche SEO comuni.
+- **Output strutturato:** pronto per CMS/renderer.
+- **Regole di stile:** minimizzano contenuti fuorvianti o ridondanti.
+
+**Fonti**
+- OpenAI — Prompt Engineering Guide: istruzioni concise e output strutturato.
+- Linee guida SEO on-page note (lunghezze title/description comunemente accettate).
+

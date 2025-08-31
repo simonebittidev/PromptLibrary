@@ -1,0 +1,28 @@
+{
+  "id": "openai/openai-index",
+  "title": "OpenAI — Modelli e Prompt di Esempio",
+  "description": "Indice dei prompt di esempio per modelli OpenAI.",
+  "source": "@site/docs/openai/README.mdx",
+  "sourceDirName": "openai",
+  "slug": "/openai/",
+  "permalink": "/PromptLibrary/docs/openai/",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/simonebittidev/PromptLibrary/edit/main/docs/openai/README.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "openai-index",
+    "title": "OpenAI — Modelli e Prompt di Esempio",
+    "description": "Indice dei prompt di esempio per modelli OpenAI."
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Mixtral 8x7B Instruct — Test Case da JSON Schema",
+    "permalink": "/PromptLibrary/docs/mistral/mixtral-8x7b-instruct/"
+  },
+  "next": {
+    "title": "GPT-4o",
+    "permalink": "/PromptLibrary/docs/openai/gpt-4o"
+  }
+}

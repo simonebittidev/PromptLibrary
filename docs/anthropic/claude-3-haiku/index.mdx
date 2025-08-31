@@ -1,0 +1,42 @@
+---
+id: anthropic-claude-3-haiku-chat-triage
+title: Anthropic Claude 3 Haiku — Triage Chat di Supporto
+description: Prompt per riassumere e categorizzare rapidamente conversazioni di supporto in classi chiuse.
+keywords: [anthropic, claude 3, haiku, classification, summarization]
+---
+
+**Overview**
+- **Modello:** Anthropic `Claude 3 Haiku`
+- **Perché:** Veloce ed economico per classificazione e sintesi brevi.
+- **Output:** Categoria, priorità e sommario.
+
+**Use Case**
+- **Scenario:** Hai trascrizioni di chat; devi assegnare categoria e priorità e fornire un breve riassunto.
+
+**Prompt**
+
+```
+Ruolo: Sei un triager di supporto.
+
+Classi consentite:
+- categoria: ["bug", "billing", "how_to", "feature_request", "altro"]
+- priorita: ["bassa", "media", "alta", "critica"]
+
+Output SOLO JSON:
+{"categoria": "...", "priorita": "...", "sommario": "(<= 3 frasi)"}
+
+Trascrizione (<chat>):
+<chat>
+{{TRASCRIZIONE}}
+</chat>
+```
+
+**Perché Funziona**
+- **Classi chiuse:** riducono ambiguità.
+- **Limite di lunghezza:** forza concisione utile al routing.
+- **Costo/latency:** adatto a volumi elevati.
+
+**Fonti**
+- Anthropic — Prompting: definire label/enum e output strutturati.
+- Pratiche comuni per triage assistito da LLM.
+

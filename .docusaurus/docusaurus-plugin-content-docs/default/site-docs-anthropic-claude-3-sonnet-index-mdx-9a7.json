@@ -1,0 +1,35 @@
+{
+  "id": "anthropic/claude-3-sonnet/anthropic-claude-3-sonnet-sql-from-spec",
+  "title": "Anthropic Claude 3 Sonnet — SQL da Schema + Domanda",
+  "description": "Prompt per generare query SQL corrette a partire da descrizione schema e richiesta in linguaggio naturale.",
+  "source": "@site/docs/anthropic/claude-3-sonnet/index.mdx",
+  "sourceDirName": "anthropic/claude-3-sonnet",
+  "slug": "/anthropic/claude-3-sonnet/",
+  "permalink": "/PromptLibrary/docs/anthropic/claude-3-sonnet/",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/simonebittidev/PromptLibrary/edit/main/docs/anthropic/claude-3-sonnet/index.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "anthropic-claude-3-sonnet-sql-from-spec",
+    "title": "Anthropic Claude 3 Sonnet — SQL da Schema + Domanda",
+    "description": "Prompt per generare query SQL corrette a partire da descrizione schema e richiesta in linguaggio naturale.",
+    "keywords": [
+      "anthropic",
+      "claude 3",
+      "sonnet",
+      "sql",
+      "generation"
+    ]
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Anthropic Claude 3 Opus — Checklist Compliance da T&C",
+    "permalink": "/PromptLibrary/docs/anthropic/claude-3-opus/"
+  },
+  "next": {
+    "title": "Cohere Command‑R — Estrazione Dati CRM da Email",
+    "permalink": "/PromptLibrary/docs/cohere/command-r/"
+  }
+}

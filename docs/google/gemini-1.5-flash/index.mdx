@@ -1,0 +1,43 @@
+---
+id: google-gemini-1-5-flash-log-summary
+title: Google Gemini 1.5 Flash — Sintesi Log e Azioni
+description: Prompt per riassumere log di errori e proporre azioni correttive concise.
+keywords: [google, gemini, flash, logs, summarization]
+---
+
+**Overview**
+- **Modello:** Google `Gemini 1.5 Flash`
+- **Perché:** Bassa latenza per sintesi rapide e actionable.
+- **Output:** Riassunto + checklist azioni prioritarie.
+
+**Use Case**
+- **Scenario:** Hai un blocco di log recenti da un servizio. Vuoi una sintesi con cause probabili e azioni ordinate per impatto.
+
+**Prompt**
+
+```
+Ruolo: Sei un SRE virtuale conciso e pragmatico.
+
+Istruzioni:
+- Leggi i log tra <logs></logs>.
+- Fornisci SOLO:
+  1) "Sintesi" (3-5 frasi chiare)
+  2) "Cause Probabili" (max 3 bullet)
+  3) "Azioni Consigliate" (checklist ordinata per impatto vs sforzo)
+- Non includere output verboso, niente stacktrace ripetuti.
+
+Input log:
+<logs>
+{{LOG_TESTO}}
+</logs>
+```
+
+**Perché Funziona**
+- **Struttura fissa:** favorisce decisioni rapide.
+- **Vincolo di lunghezza:** riduce rumore.
+- **Latenza bassa:** ideale per incident response.
+
+**Fonti**
+- Google — Prompting Basics per Gemini: richieste concise e goal-driven.
+- Pattern SRE per postmortem/sintesi incident.
+

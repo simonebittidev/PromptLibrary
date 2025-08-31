@@ -65,15 +65,18 @@ export default {
           "onUntruncatedBlogPosts": "warn"
         },
         "theme": {
-          "customCss": "./src/css/custom.css"
+          "customCss": "/Users/simonebitti/Documents/GitHub/PromptLibrary/src/css/custom.css"
         }
       }
     ]
   ],
+  "stylesheets": [
+    "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+  ],
   "themeConfig": {
     "image": "img/docusaurus-social-card.jpg",
     "navbar": {
-      "title": "My Site",
+      "title": "Prompt Library",
       "logo": {
         "alt": "My Site Logo",
         "src": "img/logo.svg"
@@ -376,7 +379,6 @@ export default {
   "themes": [],
   "scripts": [],
   "headTags": [],
-  "stylesheets": [],
   "clientModules": [],
   "titleDelimiter": "|",
   "noIndex": false,

@@ -1,0 +1,35 @@
+{
+  "id": "openai/gpt-4.1-mini/openai-gpt-4-1-mini-support-extraction",
+  "title": "OpenAI GPT‑4.1‑mini — Estrazione Strutturata da Ticket",
+  "description": "Prompt per estrarre entità e campi normalizzati da ticket di supporto disordinati in un JSON conforme a schema.",
+  "source": "@site/docs/openai/gpt-4.1-mini/index.mdx",
+  "sourceDirName": "openai/gpt-4.1-mini",
+  "slug": "/openai/gpt-4.1-mini/",
+  "permalink": "/PromptLibrary/docs/openai/gpt-4.1-mini/",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/simonebittidev/PromptLibrary/edit/main/docs/openai/gpt-4.1-mini/index.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "openai-gpt-4-1-mini-support-extraction",
+    "title": "OpenAI GPT‑4.1‑mini — Estrazione Strutturata da Ticket",
+    "description": "Prompt per estrarre entità e campi normalizzati da ticket di supporto disordinati in un JSON conforme a schema.",
+    "keywords": [
+      "openai",
+      "gpt-4.1-mini",
+      "extraction",
+      "prompt",
+      "schema"
+    ]
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "OpenAI GPT‑4.1 — JSON API → Report Markdown",
+    "permalink": "/PromptLibrary/docs/openai/gpt-4.1/"
+  },
+  "next": {
+    "title": "OpenAI GPT‑4o — Estrazione Spese da Scontrino (Vision)",
+    "permalink": "/PromptLibrary/docs/openai/gpt-4o/"
+  }
+}

@@ -1,0 +1,55 @@
+---
+id: openai-gpt-4-1-mini-support-extraction
+title: OpenAI GPT‑4.1‑mini — Estrazione Strutturata da Ticket
+description: Prompt per estrarre entità e campi normalizzati da ticket di supporto disordinati in un JSON conforme a schema.
+keywords: [openai, gpt-4.1-mini, extraction, prompt, schema]
+---
+
+**Overview**
+- **Modello:** OpenAI `gpt-4.1-mini`
+- **Perché:** Economico e veloce per estrazioni strutturate ad alta precisione.
+- **Output:** JSON aderente a uno schema target predefinito.
+
+**Use Case**
+- **Scenario:** Arrivano ticket via email/chat. Serve normalizzare `categoria`, `priorità`, `cliente`, `prodotto`, `descrizione`, `riproducibilità`, `allegati` in un JSON coerente.
+
+**Prompt**
+
+```
+Ruolo: Sei un estrattore di dati accurato. Devi mappare un testo di ticket a un JSON valido secondo uno schema.
+
+Schema target (JSON Schema-like):
+{
+  "type": "object",
+  "required": ["categoria", "priorita", "cliente", "prodotto", "descrizione"],
+  "properties": {
+    "categoria": {"enum": ["bug", "richiesta", "domanda", "altro"]},
+    "priorita": {"enum": ["bassa", "media", "alta", "critica"]},
+    "cliente": {"type": "string"},
+    "prodotto": {"type": "string"},
+    "descrizione": {"type": "string"},
+    "riproducibilita": {"enum": ["sempre", "spesso", "intermittente", "non_riproducibile", "nd"]},
+    "allegati": {"type": "array", "items": {"type": "string", "format": "uri"}}
+  }
+}
+
+Istruzioni:
+- Leggi il ticket tra <ticket></ticket>.
+- Se un campo è assente, usa una value valida (es. "nd" per riproducibilità) e non inventare link/allegati.
+- Restituisci SOLO il JSON, nessun testo aggiuntivo.
+
+Input:
+<ticket>
+{{TESTO_TICKET}}
+</ticket>
+```
+
+**Perché Funziona**
+- **Schema vincolante:** riduce variabilità e facilita validazione automatica.
+- **Enum espliciti:** guidano la classificazione a classi chiuse.
+- **Delimitazione input:** previene confusione modello/istruzioni.
+
+**Fonti**
+- OpenAI — Prompt Engineering Guide: schemi d’output e vincoli per estrazione.
+- Pattern consolidati per IE (Information Extraction) con LLM su ticket/CRM.
+
