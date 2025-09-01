@@ -1,0 +1,185 @@
+---
+title: JSON → Markdown
+---
+
+# JSON → Markdown
+
+Transform structured JSON into clear, repeatable Markdown using GPT‑4.1. The prompts below follow OpenAI’s guidance to be explicit about output format, use unambiguous delimiters, and avoid speculative content. They instruct the model to only emit Markdown, preserve field order, and gracefully skip missing data.
+
+Note: While GPT‑4.1 supports Structured Outputs for guaranteed JSON, here we leverage its strong instruction-following and Markdown fidelity. Keep temperature low (e.g., 0–0.3) for deterministic formatting.
+
+## Example 1 — Product Catalog → Markdown Product Sheet
+
+Prompt (for `gpt-4.1`): Ask the model to convert a product catalog JSON into a compact product sheet with a summary table and per‑product sections.
+
+````markdown
+You are a meticulous technical writer.
+Task: Convert the following catalog JSON into a Markdown product sheet.
+
+Formatting requirements:
+- Only output Markdown. No preface or commentary.
+- H1: catalog.title
+- Intro paragraph with currency.
+- Summary table with columns: SKU | Name | Price | Tags
+- For each product: H3 "Name (SKU)", then:
+  - Bullet list of features
+  - "Specifications" table from specs (key → value)
+- Price: include currency; format to two decimals.
+- If a field is missing, omit that line/section.
+- Do not invent data that is not present in the JSON.
+
+Input JSON (do not echo back outside the table/sections):
+```json
+{
+  "catalog": {
+    "title": "Acme Spring 2025",
+    "currency": "USD",
+    "products": [
+      {
+        "sku": "ACM-001",
+        "name": "Widget Pro",
+        "price": 129.99,
+        "tags": ["premium", "steel"],
+        "features": [
+          "Brushed steel housing",
+          "Energy efficient"
+        ],
+        "specs": {
+          "weight": "1.4 kg",
+          "dimensions": "120×80×60 mm",
+          "warranty": "2 years"
+        }
+      },
+      {
+        "sku": "ACM-002",
+        "name": "Widget Mini",
+        "price": 59.5,
+        "tags": ["compact"],
+        "features": ["Pocket size"],
+        "specs": {
+          "weight": "0.4 kg",
+          "dimensions": "60×40×30 mm"
+        }
+      }
+    ]
+  }
+}
+```
+````
+
+Expected Markdown output:
+
+```markdown
+# Acme Spring 2025
+
+All prices are in USD.
+
+| SKU     | Name        | Price   | Tags            |
+|---------|-------------|---------|-----------------|
+| ACM-001 | Widget Pro  | USD 129.99 | premium, steel |
+| ACM-002 | Widget Mini | USD 59.50  | compact         |
+
+### Widget Pro (ACM-001)
+
+- Brushed steel housing
+- Energy efficient
+
+Specifications
+
+| Key        | Value            |
+|------------|------------------|
+| weight     | 1.4 kg           |
+| dimensions | 120×80×60 mm     |
+| warranty   | 2 years          |
+
+### Widget Mini (ACM-002)
+
+- Pocket size
+
+Specifications
+
+| Key        | Value        |
+|------------|--------------|
+| weight     | 0.4 kg       |
+| dimensions | 60×40×30 mm  |
+```
+
+Why this suits GPT‑4.1: The model follows precise formatting rules and reliably renders Markdown tables and sections when instructions are explicit and the output format is constrained. The prompt uses clear delimiters and “only output Markdown” guidance, aligning with OpenAI’s recommendations for deterministic formatting.
+
+## Example 2 — API Changes JSON → Markdown Release Notes
+
+Prompt (for `gpt-4.1`): Instruct the model to produce semantically organized release notes with consistent headings and a conditional upgrade guide.
+
+````markdown
+You are an expert release-notes editor.
+Task: Transform the following JSON into Markdown release notes.
+
+Rules:
+- Only output Markdown. No extra commentary.
+- H1: "{package} {version} — Release Notes"; include date on the next line.
+- Add a short Summary paragraph.
+- Create sections (H2) for any of: Added, Changed, Fixed, Deprecated, Security — only if present.
+- For each item, format as a bullet: "Title" (scope) — and include issue numbers as #1234 when provided.
+- Mark breaking changes clearly with "Breaking:" at the start of the bullet.
+- If any breaking changes exist, add an "Upgrade Guide" section summarizing concrete actions from the JSON.
+- Do not invent details not present in the input.
+
+Input JSON:
+```json
+{
+  "package": "Payments API",
+  "version": "v3.2.0",
+  "date": "2025-08-20",
+  "summary": "Improved idempotency and new webhook events.",
+  "changes": {
+    "added": [
+      { "title": "New webhook: payment.dispute.opened", "scope": "webhooks", "issue": 8123 }
+    ],
+    "changed": [
+      { "title": "Idempotency keys can be reused within 24h", "scope": "core", "breaking": false }
+    ],
+    "fixed": [
+      { "title": "Retry jitter calculation", "scope": "client" }
+    ],
+    "deprecated": [
+      { "title": "Legacy parameter: capture_immediately", "scope": "charges", "breaking": true, "upgrade": "Use capture_strategy instead" }
+    ]
+  }
+}
+```
+````
+
+Expected Markdown output:
+
+```markdown
+# Payments API v3.2.0 — Release Notes
+2025-08-20
+
+Improved idempotency and new webhook events.
+
+## Added
+- New webhook: payment.dispute.opened (webhooks) — #8123
+
+## Changed
+- Idempotency keys can be reused within 24h (core)
+
+## Fixed
+- Retry jitter calculation (client)
+
+## Deprecated
+- Breaking: Legacy parameter: capture_immediately (charges)
+
+## Upgrade Guide
+- Replace capture_immediately with capture_strategy where used.
+```
+
+Why this suits GPT‑4.1: GPT‑4.1 handles hierarchical JSON cleanly and adheres to strict sectioning, enabling consistent, publish‑ready Markdown. The clear “only output Markdown” constraint and concrete schemas mirror OpenAI’s prompt‑engineering best practices for reliable formatting.
+
+---
+
+Tips
+
+- Be explicit: list headings, tables, and any conditional sections.
+- Use fenced code blocks and clear delimiters for inputs.
+- Keep temperature low for stable formatting.
+- Validate outputs downstream if you require strict conformance (e.g., lint Markdown or post‑process).
