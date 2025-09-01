@@ -1,0 +1,8 @@
+{
+  "index": "Home",
+  "openai": "OpenAi",
+  "google": "Google",
+  "anthropic": "Anthropic",
+  "meta": "Meta",
+  "mistral": "Mistral"
+}

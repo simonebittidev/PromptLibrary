@@ -1,0 +1,35 @@
+{
+  "type": "module",
+  "name": "promptlibrary",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/simonebittidev/PromptLibrary.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/simonebittidev/PromptLibrary/issues"
+  },
+  "homepage": "https://github.com/simonebittidev/PromptLibrary#readme",
+  "description": "",
+  "dependencies": {
+    "next": "^15.5.2",
+    "nextra": "^4.4.0",
+    "nextra-theme-docs": "^4.4.0",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1"
+  },
+  "devDependencies": {
+    "@types/node": "^24.3.0",
+    "@types/react": "^19.1.12",
+    "typescript": "^5.9.2"
+  }
+}
